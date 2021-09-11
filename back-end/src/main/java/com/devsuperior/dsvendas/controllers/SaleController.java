@@ -1,5 +1,7 @@
 package com.devsuperior.dsvendas.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -9,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.devsuperior.dsvendas.dto.SaleDTO;
+import com.devsuperior.dsvendas.dto.SaleSuccessDTO;
+import com.devsuperior.dsvendas.dto.SaleSumDTO;
 import com.devsuperior.dsvendas.entities.Sale;
 import com.devsuperior.dsvendas.repositories.SaleRepository;
 import com.devsuperior.dsvendas.services.SaleServices;
@@ -32,6 +36,16 @@ public class SaleController {
 	@RequestMapping(method = RequestMethod.GET, value = "/list")
 	public Page<SaleDTO> findAll(Pageable pageable) {
 		return this.saleServices.findAll(pageable);
+	}
+	
+	@RequestMapping(method = RequestMethod.GET, value = "/amountBySeller")
+	public List<SaleSumDTO> amountGroupedBySeller() {
+		return this.saleServices.amountGroupedBySeller();
+	}
+	
+	@RequestMapping(method = RequestMethod.GET, value = "/successBySeller")
+	public List<SaleSuccessDTO> successGroupedBySeller() {
+		return this.saleServices.successGroupedBySeller();
 	}
 
 }
