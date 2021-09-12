@@ -1,13 +1,8 @@
-import NavBar from "./components/NavBar";
+import Routes from "./Routes";
 
 function App() {
   return (
-    <>
-    <div>
-      <NavBar />
-      <h1 className="text-primary">Olá mundo!</h1>
-    </div>
-    </>
+    <Routes />
   );
 }
 
