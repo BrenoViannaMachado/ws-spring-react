@@ -8,10 +8,10 @@ function Home() {
       <NavBar />
       <div className="container">
         <div className="jumbotron">
-          <h1 className="display-4">DSVendas</h1>
-          <p className="lead">Analise o desempenho das suas vendas por diferentes perspectivas</p>
+          <h1 className="display-4">Brenola Vendas</h1>
+          <p className="lead">Analise de desempenho de diversas vendas</p>
           <hr />
-          <p>Esta aplicação consiste em exibir um dashboard a partir de dados fornecidos por um back end construído com Spring Boot.</p>
+          <p>Esta aplicação consiste em exibir um dashboard a partir de dados fornecidos por um backend construído com SpringBoot para fins de teste!</p>
           <Link className="btn btn-primary btn-large" to="/dashboard">
             Acessar dashboard
           </Link>
